@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array methods</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let sports = ['Cricket','Golf','Baseball','Basketball'];
+        let sports1 = ['Runningrace','Tennis','Baseball'];
+    //concat
+        console.log(sports.concat(sports1)); 
+    //constructor
+        console.log(sports.constructor);
+    //copywithin
+        // console.log(sports.copyWithin(1,0));
+    //entries
+        let ite = sports.entries();
+        for (let e of ite )
+        {
+            console.log(e);
+        }
+    //fill
+        // console.log(sports.fill('lemonspoon',1,3));
+    //from
+        console.log(Array.from('dhana'));
+    //includes
+        console.log(sports.includes('Golf'));
+    // indexof & lastindexof
+        console.log(sports.indexOf('Cricket'));
+        console.log(sports.lastIndexOf('Golf'));
+    //isarray
+        console.log(Array.isArray(sports));
+    //join
+        console.log(sports.join(','));
+    //keys
+    let ite1 = sports.keys();
+        for (let z of ite1 )
+        {
+            console.log(z);
+        }
+    //length
+        console.log(sports.length);
+    //pop
+        // console.log(sports.pop());
+
+    //push
+        // console.log(sports.push('lemonandspoon'));
+    //reduceright
+        const values = [2,5,7,9,16]
+        const reducer = function getout(fir,sec)
+        {
+            return fir+''+sec;
+        }
+        console.log(values.reduceRight(reducer));
+    //reverse
+        // console.log(sports.reverse());
+    //shift
+        // console.log(sports.shift());
+    //slice
+        console.log(sports.slice(1,3));
+    //sort
+        // console.log(sports.sort());
+        const tot = values.sort(function(a,b)
+        {
+            return a+b;
+        })
+        console.log(tot);
+    //unshift
+        // console.log(sports.unshift('apple'));
+        
+    //splice
+        // sports.splice(2,1,'apple','banana')
+        //     console.log(sports);
+    //tostring
+        console.log(sports.toString());
+    //valueof
+        console.log(sports.valueOf());
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String Methods</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const sports = 'Runningrace,Cricket,Baseball,Basketball';
+        const sports1 = 'Tennis,Golf,Volleyball,Golf';
+//String Methods
+      //charAt
+          console.log(sports.charAt(1),'charAt'); 
+          console.log(sports.charAt(100),'charAt');    
+      //charCodeAt
+          console.log(sports.charCodeAt(12),'charCodeAt');  
+          console.log(sports.charAt(100),'charCodeAt'); 
+      //constructor
+        console.log(sports.constructor,'constructor');   
+      //concat
+          console.log(sports.concat(' '+ '&' +' '+ sports1),'concat');  
+          console.log(`${sports} & ${sports1}`,'concat'); 
+      //endswith 
+          console.log(sports.endsWith('l'),'endsWith');
+      //fromcharcode
+          console.log(String.fromCharCode(67),'fromcharcode');
+          console.log(String.fromCharCode(6700000),'fromcharcode');
+      //includes
+          console.log(sports.includes('Baseball'),'includes');
+          console.log(sports.includes('baseball'),'includes');
+      //indexof & lastindexof
+          console.log((sports.indexOf('i')),'indexof');
+          console.log((sports.indexOf('i',5)));
+          console.log((sports.indexOf('i',20)));
+          console.log((sports.lastIndexOf('i')),'lastindexof');
+          console.log((sports.lastIndexOf('i',5)));
+          console.log((sports.lastIndexOf('i',3)));
+      //length
+          console.log(sports.length ,'length');
+      //match
+          console.log(sports.match(/Bas/g),'match'); 
+          console.log(sports.match(/Bas/i)); 
+          console.log(sports.match(/bas/g),'match'); 
+          console.log(sports.match(/bas/i)); 
+      //repeat
+        console.log(sports.repeat(2),'repeat');
+        console.log(sports.repeat());
+      //replace
+        console.log(sports.replace('Bas','ball'),'replace');
+        console.log(sports.replace(/bas/g,'ball'));
+        console.log(sports.replace(/bas/ig,'ball'));
+        console.log(sports.replace(/Bas|Cricket|Runningrace/ig, function (name){
+            return name.toUpperCase();
+        }));
+        console.log(sports.replace(/bas/i,'ball'));
+      //search
+        console.log(sports.search(/bas/ig),'search');
+        console.log(sports.search(/bas/i),'search');
+        console.log(sports.search(/bas/g),'search');
+        console.log(sports.search(/dgf/gi),'search');
+      //slice
+        console.log(sports.slice(0,11),'slice');
+        console.log(sports.slice(0,-11),'slice');
+      //split
+        console.log(sports.split(','));
+      //startswith
+         console.log(sports.startsWith('l'),'startsWith');
+      //substr
+        console.log(sports.substr(12,7),'substr');
+      //substring
+        console.log(sports.substring(0,11),'substring');
+      //tolowercase
+        console.log(sports.toLowerCase(),'lowercase');
+      //touppercase
+        console.log(sports.toUpperCase(),'uppercase');
+      //tostring
+         const names = ['dhana','lakshmi'];
+        console.log(names.toString(),'tostring');
+      //trim 
+        const letters = '   asdgdgh     ';
+        console.log(letters.trim(),'trim');
+        console.log(letters.trimStart(),'trimstart');
+        console.log(letters.trimEnd(),'trimend');
+        console.log(letters.trimLeft(),'trimleft');
+        console.log(letters.trimRight(),'trimright');
+      //valueof
+        console.log(sports.valueOf(),'valueof');
+      //padend & padstart
+          const a = 'dhana';
+        console.log(a.padEnd(10,'*'));
+        console.log(a.padStart(10,'#'));
+    </script>
+    
+</body>
+</html>
